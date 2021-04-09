@@ -27,6 +27,7 @@ node {
 	
 	stage('Publish Tests Results'){
       parallel(
+
         publishJunitTestsResultsToJenkins: {
           echo "Publish junit Tests Results"
 		  junit '**/target/surefire-reports/TEST-*.xml'
